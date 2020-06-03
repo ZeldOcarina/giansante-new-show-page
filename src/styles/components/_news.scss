@@ -1,0 +1,101 @@
+.news {
+  .big-new {
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+      width: 100%;
+    }
+  }
+
+  .new {
+    margin-bottom: 5rem;
+
+    @include respond(laptop) {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 3.2rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+
+    &__subtitle {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.4rem;
+      color: $dark-grey;
+      margin: 0;
+      padding: 0;
+      letter-spacing: 0.1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    &__text {
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+      width: 100%;
+
+      @include respond(phone-port) {
+        width: 96%;
+      }
+
+      &--top {
+        margin-bottom: 5rem;
+      }
+    }
+
+    &__figure {
+      margin-bottom: 4rem;
+    }
+
+    &__caption {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__middle-figure-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-gap: 4rem;
+
+      @include respond(tab-port) {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+
+  .small-news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 45%);
+    grid-gap: 8rem;
+
+    @include respond(laptop) {
+      grid-template-columns: repeat(auto-fill, 38rem);
+      grid-gap: 8rem;
+    }
+
+    @include respond(1400) {
+      grid-template-columns: 70%;
+    }
+
+    @include respond(tab-land) {
+      grid-template-columns: 80%;
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 90%;
+    }
+
+    @include respond(phone-land) {
+      grid-template-columns: 100%;
+      grid-gap: 2rem;
+    }
+  }
+}
